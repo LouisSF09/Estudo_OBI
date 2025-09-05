@@ -10,13 +10,13 @@ Luiz Otávio de Souza Freo
 N = int(input())
 
 # Determinar quantos copos de suco podem ser bebidos
-C = 0   # variável dos copos de suco contaminados
+cont = 0   # variável dos copos de suco contaminados
 
 for i in range(N):      # repete N vezes
     A, B = map(int, input().split())    # lê os valores A e B
 
-    if (A == 1) or (B == 0):    # testa se os copos estão contaminados, pois um copo é contaminado se --> A == 0 e B == 1
-        C += 1      # caso retorne True (Verdade); conta 1 em C (copos contaminados)
+    if (A == 0) and (B == 1):    # testa se os copos estão contaminados, pois um copo é contaminado se --> A == 0 e B == 1
+        cont += 1      # caso retorne True (Verdade); conta 1 em cont (copos contaminados)
 
 # Mostra a quantidade de copos que não estão contaminados
-print(N - C)
+print(N - cont)
